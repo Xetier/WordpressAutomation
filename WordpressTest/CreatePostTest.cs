@@ -23,7 +23,7 @@ namespace WordpressTest
             LoginPage.GoTo();
             LoginPage.LoginAs("admin").WithPassword("Metroid061").Login();
 
-            NewPostPage.GoTo();
+            NewPostPage.GoToNewPost();
             NewPostPage.CreatePost("This is the test post title").WithBody("Hi, this is the body").Publish();
 
             Assert.AreEqual(PostPage.Title, "This is the test post title", "Title did not match new post.");

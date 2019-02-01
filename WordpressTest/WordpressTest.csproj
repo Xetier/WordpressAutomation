@@ -59,6 +59,7 @@
     <Compile Include="CreatePostTest.cs" />
     <Compile Include="DashboardPage.cs" />
     <Compile Include="LoginTest.cs" />
+    <Compile Include="PageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
