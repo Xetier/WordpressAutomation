@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System;
 using System.Threading;
 
 namespace WordpressAutomation
@@ -58,15 +59,15 @@ namespace WordpressAutomation
             Driver.Instance.FindElement(By.ClassName("editor-block-list__layout")).Click();
             Driver.Instance.FindElement(By.Id("mce_0")).SendKeys(body);
 
-            Thread.Sleep(1000);
+            Driver.Wait(TimeSpan.FromSeconds(1));
             Driver.Instance.FindElement(By.XPath("//*[@id='editor']/div/div/div/div[1]/div[2]/button")).Click();
-            Thread.Sleep(1000);
+            Driver.Wait(TimeSpan.FromSeconds(1));
             Driver.Instance.FindElement(By.XPath("//*[@id='editor']/div/div/div/div[1]/div[2]/button")).Click();
 
-            Thread.Sleep(1000);
+            Driver.Wait(TimeSpan.FromSeconds(1));
             Driver.Instance.FindElement(By.XPath("//*[@id='editor']/div/div/div/div[3]/div/div/div[1]/div/button")).Click();
 
-            Thread.Sleep(1000);
+            Driver.Wait(TimeSpan.FromSeconds(1));
             Driver.Instance.FindElement(By.XPath("//*[@id='editor']/div/div/div/div[3]/div/div/div[2]/div/div[2]/div[2]/a")).Click();
 
         }
