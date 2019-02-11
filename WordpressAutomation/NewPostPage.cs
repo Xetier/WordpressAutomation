@@ -6,6 +6,15 @@ namespace WordpressAutomation
 {
     public class NewPostPage
     {
+        public static void GoTo()
+        {
+            var menuPost = Driver.Instance.FindElement(By.Id("menu-posts"));
+            menuPost.Click();
+
+            var addNew = Driver.Instance.FindElement(By.LinkText("Add New"));
+            addNew.Click();
+        }
+    
         public static object Title
         {
             get
@@ -15,15 +24,6 @@ namespace WordpressAutomation
                     return title.GetAttribute("value");
                 return string.Empty;
             }
-        }
-
-        public static void GoToNewPost()
-        {
-            var menuPost = Driver.Instance.FindElement(By.Id("menu-posts"));
-            menuPost.Click();
-
-            var addNew = Driver.Instance.FindElement(By.LinkText("Add New"));
-            addNew.Click();
         }
 
         public static CreatePostCommand CreatePost(string title)
